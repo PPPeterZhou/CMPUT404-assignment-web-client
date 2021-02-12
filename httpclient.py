@@ -111,6 +111,11 @@ class HTTPClient(object):
         self.sendall(request)
         response = self.recvall(self.socket)
 
+        # Print result
+        print("\n**************** Result ****************")
+        print(response)
+        print("************ End of Result *************\n")
+
         # Get the code and body from response
         code = self.get_code(response)
         body = self.get_body(response)
@@ -172,6 +177,11 @@ class HTTPClient(object):
         # Get the code and body from response
         code = self.get_code(response)
         body = self.get_body(response)
+
+        # Print result
+        print("\n**************** Result ****************")
+        print(response)
+        print("************ End of Result *************\n")
 
         # close socket
         self.close()
